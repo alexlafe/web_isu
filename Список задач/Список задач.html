@@ -1,0 +1,73 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Список задач</title>
+	<link rel="stylesheet" type="text/css" href="Список задач.css"/>
+</head>
+<body>
+	<div class="main">
+        <div class="list-generator">
+            <div class="topline">
+                <div class="list-generator-heading">Список задач</div>
+                <div><button type="button" class="button_add" onclick="addTask()"><img src="Картинки/plus.svg"><p class="add_text">Добавить</p></button></div>
+            </div>
+            <ul class="list-of-tasks">
+                <li class="list_item">
+                    <label class="checkbox_label">
+                        <input type="checkbox" name="done" class="checkbox_image" onclick="underlineTask(this)"><span class="checkbox_span"></span>
+                    </label>
+                    <span class="task_prio_li"><img class="prio_image"></span>
+                    <span class="task_descryption_li">Задача 1</span>
+                    <div class="buttons">
+                        <button class="button_edit" onclick="editTask(this)"><img class="pen"></button>
+                        <button class="button_delete" onclick="deleteTask(this)"><img class="trash"></button>
+                    </div>
+                </li>
+                <li class="list_item">
+                    <label class="checkbox_label">
+                        <input type="checkbox" name="done" class="checkbox_image" onclick="underlineTask(this)"><span class="checkbox_span"></span>
+                    </label>
+                    <span class="task_prio_li"><img class="prio_image"></span>
+                    <span class="task_descryption_li">Задача 2</span>
+                    <div class="buttons">
+                        <button class="button_edit" onclick="editTask(this)"><img class="pen"></button>
+                        <button class="button_delete" onclick="deleteTask(this)"><img class="trash"></button>
+                    </div>
+                </li>
+                <li class="list_item">
+                    <label class="checkbox_label">
+                        <input type="checkbox" name="done" class="checkbox_image" onclick="underlineTask(this)"><span class="checkbox_span"></span>
+                    </label>
+                    <span class="task_prio_li"><img class="prio_image2"></span>
+                    <span class="task_descryption_li">Задача 3</span>
+                    <div class="buttons">
+                        <button class="button_edit" onclick="editTask(this)"><img class="pen"></button>
+                        <button class="button_delete" onclick="deleteTask(this)"><img class="trash"></button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="list-edition">
+            <form name="TaskEditForm">
+                <div class="list-edition-heading">Редактирование задачи</div>
+                <p class="task-word">Задача</p>
+                <br>
+                <input type="text" class="form-control" name="task_descryption">
+                <br>
+                <div class="under-text-task">
+                    <label>
+                        <label class="checkbox_label_special">
+                            <input type="checkbox" name="task_prio"class="checkbox_image"><span class="checkbox_span"></span>
+                        </label>
+                        Задача с приоритетом<span><img class="prio_image_special"></span>
+                    </label>
+                </div>
+                <br>
+                <button type="button" class="button_save" onclick="saveTask()">Сохранить</button>
+                <button type="button" class="button_cancel" onclick="cancelTask()">Отменить</button>
+            </form>
+        </div>
+    </div>
+	<script src="Список задач.js"></script>
+</body>
+</html>

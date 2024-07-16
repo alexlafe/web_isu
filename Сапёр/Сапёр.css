@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+.play-pad
+{
+    display: flex;
+    flex-wrap: wrap;
+    width: 390px;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.play-cell
+{
+    width: 30px;
+    height: 30px;
+    border: solid 1px gray;
+    cursor: pointer;
+    background: #ddd;
+    text-align: center;
+	padding-top: 10px;
+}
+
+.play-cell--open
+{
+    background: #fff;
+    cursor: default;
+}
+
+.play-cell--fail
+{
+    cursor: default;
+}
+
+.play-cell--bomb
+{
+    background: red;
+    color: white;
+}
+
+.play-cell--bomb::after
+{
+    content: url("Картинки/бомба.png");
+}
+
+.play-cell--marked::after
+{
+    content: url("Картинки/флаг.png");
+}
+
+.startAganebutton
+{
+    border-radius: 15px;
+    width: 200px;
+    height: 30px;
+    border: royalblue solid 3px;
+    background-color: royalblue;
+	color: white;
+    font-size: 14pt;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.button
+{
+    display: flex;
+}
+
+.message
+{
+    display: flex;
+    padding-top: 15px;
+}
+.message p
+{
+    display: none;
+    margin: auto;
+}
+
+.message p.show
+{
+    display: block;
+}
+
+.play-cell.cursor
+{
+    background-color: red;
+}
